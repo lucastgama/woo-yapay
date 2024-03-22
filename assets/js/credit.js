@@ -67,17 +67,22 @@ class Credit
     }
     
     setOwnerMask() {
-        const owner = document.querySelector("#wc-yapay_intermediador-cc-card-holder-name");
-    
+        let owner = document.querySelector("#wc-yapay_intermediador-cc-card-holder-name");
+
         if (owner) {
-          var mask = {
-            mask: /^[A-Za-z\s]*$/
-          };
-          IMask(owner, mask);
+            let mask = {
+                mask: /^[A-Za-z\sàáâãéèêíïóôõöúùûü]*$/
+            };
+            IMask(owner, mask);
         }
 
-        owner.addEventListener('keydown', () => {
+        owner.addEventListener('input', () => {
             let text = owner.value;
+            text = text.replace(/[áàãâä]/gi, 'a');
+            text = text.replace(/[éèêë]/gi, 'e');
+            text = text.replace(/[íìîï]/gi, 'i');
+            text = text.replace(/[óòõôö]/gi, 'o');
+            text = text.replace(/[úùûü]/gi, 'u');
             owner.value = text.toUpperCase();
         })
     }
