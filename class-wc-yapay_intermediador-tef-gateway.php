@@ -63,7 +63,6 @@ class WC_Yapay_Intermediador_Tef_Gateway extends WC_Payment_Gateway {
         add_thickbox();
         $payment_methods = array();
 
-        $payment_methods["7"] = "Itaú Shopline (Transferência)";
         $payment_methods["14"] = "Peela";
         $payment_methods["21"] = "Transf. Online HSBC";
         $payment_methods["22"] = "Transf. Online Bradesco";
@@ -121,7 +120,7 @@ class WC_Yapay_Intermediador_Tef_Gateway extends WC_Payment_Gateway {
                     'type'              => 'multiselect',
                     'class'             => 'wc-enhanced-select',
                     'css'               => 'width: 450px;',
-                    'default'           => array("7","14","21","22","23"),
+                    'default'           => array("14","21","22","23"),
                     'description'       => __( 'Selecione todos os meios de pagamento disponíveis na loja.', 'wc-yapay_intermediador-tef' ),
                     'options'           => $payment_methods,
                     'desc_tip'          => true,
@@ -411,7 +410,6 @@ class WC_Yapay_Intermediador_Tef_Gateway extends WC_Payment_Gateway {
 
         $strPaymentMethod = "";
         switch ( intval( $data['payment_method'] ) ) {
-            case 7: $strPaymentMethod  = "Itaú";break;
             case 14: $strPaymentMethod = "Peela";break;
             case 21: $strPaymentMethod = "HSBC";break;
             case 22: $strPaymentMethod = "Bradesco";break;
