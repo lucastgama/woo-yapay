@@ -51,6 +51,9 @@ Para dúvidas envie um e-mail para nosso time de Integração: integracao@yapay.
 2. Página de configuração do plugin
 
 == Changelog ==
+= 0.7.9 = 25/10/2024
+* Fix: Correção da requisição das parcelas
+
 = 0.7.7 = 25/10/2024
 * Fix: Correção da requisição das parcelas
 
