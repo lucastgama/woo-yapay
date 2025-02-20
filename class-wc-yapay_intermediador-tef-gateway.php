@@ -9,6 +9,7 @@ if ( ! class_exists( 'WC_Yapay_Intermediador_Tef_Gateway' ) ) :
 /**
  * WooCommerce Vindi Intermediador main class.
  */
+
 class WC_Yapay_Intermediador_Tef_Gateway extends WC_Payment_Gateway {
 
     function __construct() {
