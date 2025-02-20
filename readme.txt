@@ -52,7 +52,8 @@ Para dúvidas envie um e-mail para nosso time de Integração: integracao@yapay.
 
 == Changelog ==
 = 0.7.9 = 03/12/2024
-* Feature: Transferência bancária do Itaú removida.
+* Feature: Transferência bancária removida.
+* Fix: Correção do regex visa.
 
 = 0.7.8 = 03/12/2024
 * Fix: Ajuste tamanho do QrCode
