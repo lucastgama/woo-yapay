@@ -89,6 +89,7 @@ class Credit {
 
         card.addEventListener('input', () => {
             this.setCardBrand(card);
+            console.log(this.setBrandEvents(card))
             this.getSplits();
         });
     }
@@ -102,15 +103,15 @@ class Credit {
     
         paymentMethod.value = '';
     
+        brandElements.forEach((element) => {
+            element.classList.remove('tcPaymentFlagSelected');
+        });
+    
         for (const brand of Object.keys(brands)) {
             const brandCode = this.getBrandCode(brand);
             const brandElement = document.getElementById(`tcPaymentFlag${brandCode}`);
     
-            brandElements.forEach((element) => {
-                element.classList.remove('tcPaymentFlagSelected');
-            });
-    
-            if (!brandElement) return;
+            if (!brandElement) continue;
     
             if (brands[brand].test(number)) {
                 paymentMethod.value = brandCode;
