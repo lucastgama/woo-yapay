@@ -89,7 +89,6 @@ class Credit {
 
         card.addEventListener('input', () => {
             this.setCardBrand(card);
-            console.log(this.setBrandEvents(card))
             this.getSplits();
         });
     }
