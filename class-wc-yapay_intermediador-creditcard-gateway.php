@@ -512,7 +512,7 @@ if (!class_exists('WC_Yapay_Intermediador_Creditcard_Gateway')) :
                 $errors[] = "<strong>Quantidade de Parcelas</strong> não informado";
             }
 
-            if ($_POST["billing_phone"] == "") {
+            if ($_POST["billing_phone"] && $_POST["billing_cellphone"] ) {
                 $errors[] = "<strong>Telefone</strong> não informado";
             }
 
